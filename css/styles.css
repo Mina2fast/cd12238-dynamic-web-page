@@ -272,5 +272,15 @@ section.active .landing__container::after {
         transform: rotate(360deg) translate(-1em) rotate(-360deg);
     }
 }
-
+body > header > .navbar__menu>ul>li{
+    padding: 10px;
+}
+body > header > .navbar__menu>ul>li:hover{
+  background-color: #2015ff;
+  color: #fff;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  
 /* TODO: Add styles for Comments section and form */
