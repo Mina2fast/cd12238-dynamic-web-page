@@ -284,3 +284,74 @@ html {
   }
   
 /* TODO: Add styles for Comments section and form */
+#comments {
+    padding: 2em;
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 2em;
+}
+
+.comment {
+    margin-bottom: 1.5em;
+    padding: 1em;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.comment p {
+    margin: 0.5em 0;
+}
+
+.comment strong {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Styles for Comment Form */
+.comment__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment__form h2 {
+    margin-bottom: 1em;
+    font-size: 1.5em;
+}
+
+.comment__form label {
+    margin-top: 0.5em;
+    margin-bottom: 0.2em;
+    font-weight: bold;
+}
+
+.comment__form input,
+.comment__form textarea {
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.comment__form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.comment__form button {
+    padding: 0.7em 1.5em;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    background-color: #2015ff;
+    color: #fff;
+    
+}
+
+.comment__form button:hover {
+    background-color: #171a53;
+}

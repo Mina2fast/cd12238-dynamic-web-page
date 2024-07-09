@@ -11,12 +11,31 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       navBarItem.appendChild(newListItem);
     });
-  });
+
+  const form = document.querySelector('.comment__form');
+  form.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent the form from submitting and refreshing the page
+
+    let Name = document.querySelector("#name").value;
+    let comment = document.querySelector("#comment").value;
+
+    const commentSection = document.querySelector('#comments');
+    const newComment = document.createElement("div");
+
+    newComment.classList.add("comment"); // Add class without the #
+    newComment.innerHTML = `
+    <p>${comment}</p>
+    <strong>${Name}</strong>`; // Directly use <strong>
+
+    commentSection.appendChild(newComment);
+    Name = '';
+    comment= '';
+});
+})
   
   
-  
-/** TODO: Add smooth scrolling **/
+
 
 /** TODO: Add an active state **/
 
-/** TODO: Add a comment form **/
+
