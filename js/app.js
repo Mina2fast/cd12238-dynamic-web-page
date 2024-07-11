@@ -14,28 +14,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const form = document.querySelector('.comment__form');
   form.addEventListener('submit', (event) => {
-    event.preventDefault(); // Prevent the form from submitting and refreshing the page
+    event.preventDefault(); 
 
     let Name = document.querySelector("#name").value;
     let comment = document.querySelector("#comment").value;
+    let email = document.querySelector('#email').value
 
     const commentSection = document.querySelector('#comments');
     const newComment = document.createElement("div");
 
-    newComment.classList.add("comment"); // Add class without the #
+    newComment.classList.add("comment"); 
     newComment.innerHTML = `
     <p>${comment}</p>
-    <strong>${Name}</strong>`; // Directly use <strong>
-
+    <p><strong>${Name}</strong> (${email})</p>`
     commentSection.appendChild(newComment);
     Name = '';
     comment= '';
 });
+function getSectionPosition(sections) {
+  return sections.getBoundingClientRect();
+}
+
+function isSectionInViewport(sections) {
+  const position = getSectionPosition(sections);
+  return (position.top >= 0 && position.top <= window.innerHeight);
+}
+
+
+function toggleActiveClass() {
+  sections.forEach(sections => {
+      if (isSectionInViewport(sections)) {
+          sections.classList.add('active');
+      } else {
+          sections.classList.remove('active');
+      }
+  });
+}
+
+
+window.addEventListener('scroll', toggleActiveClass);
 })
   
   
 
 
-/** TODO: Add an active state **/
 
 
