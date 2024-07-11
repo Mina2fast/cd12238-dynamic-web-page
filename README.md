@@ -1,13 +1,10 @@
-# Dynamic Web Page Project
+description:
 
-This project requires you to build a multi-section landing page, with a dynamically updating navigational menu based on the amount of content that is added to the page.
+This project creates a dynamic webpage with a navigation bar that smoothly scrolls to different sections. 
 
----
+Skills Required:
 
-## Instructions
-
-The starter project has some HTML and CSS styling to display a static version of the Dynamic Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-For more detailed requirements, see the project instructions in the Udacity Classroom.
+HTML and CSS
+JavaScript DOM manipulation
+Event handling in JavaScript
+Form validation
